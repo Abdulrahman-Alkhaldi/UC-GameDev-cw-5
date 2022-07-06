@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        animate.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         if (Input.GetAxis("Horizontal") > 0)
         {
             sprite.flipX = false;
